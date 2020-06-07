@@ -1,38 +1,143 @@
+body {
+  background-color: #f5f8fa;
+}
+
 .App {
+  margin: 0;
+  max-width: 100%;
+}
+
+.title {
   text-align: center;
+  font-size: 0.8em;
+  margin-top: 3.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title h1 {
+  font-weight: normal;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title h1 .teste {
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffff;
+  margin: 2%;
+  border-radius: 2.5%;
+}
+
+.container img {
+  height: 29em;
+  width: 31em;
+}
+
+.container .content {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  margin-top: 1.5em;
+}
+
+.content-title{
+  text-align: center;
+  font-size: 0.8em;
+  
+}
+
+.content-title h1{
+  margin: 0;
+}
+
+div .plans {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  margin: 2em;
+  background-color: #F5F8FA;
+  border-radius: 4%;
+  height: 11em;
 }
 
-.App-link {
-  color: #61dafb;
+.plans .people {
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.people img {
+  height: 2em;
+  width: 2em;
+}
+
+.recipes img {
+  height: 2em;
+  width: 2em;
+}
+
+.plans .people-title,.recipes-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #3BB300;
+  font-size: 1em;
+}
+
+.plans .people-title img {
+  margin-right: 0.8em;
+}
+
+.plans button {
+  margin-left: 0.7em;
+  width: 2em;
+  height: 2em;
+  border-radius: 10%;
+  border-width: 0;
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #FFFF;
+  color: #AEB2B8;
+}
+
+.plans .active {
+  background-color: #3BB300;
+  color: #FFFF;
+  outline-width: 0;
+}
+
+.plans .recipes-title img {
+  margin-right: 0.8em;
+}
+div .content-submit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content-submit button {
+  background-color: #3BB300;
+  color: #FFFF;
+  width: 23em;
+  height: 3em;
+  border-radius: 20px;
+  border-width: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.price p {
+  color: #61696F;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+.price h1 {
+  color: #FF5C26;
+}
+.price h1 span {
+  font-size: 0.6em;
 }
