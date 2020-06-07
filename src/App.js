@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 import './App.css';
@@ -18,12 +18,24 @@ const GET_PLANS = gql`
 
 function App() {
   const { loading, error, data } = useQuery(GET_PLANS);
+  const [numberOfPeople, setNumberOfPeople] = useState('');
+  const [weeklyRecipes, setWeeklyRecipes] = useState('');
+  const arrayPeople = [2,3,4];    
+  const arrayRecipe = [3,4,5,6];    
 
   if (error) return <h1>Opa, algo deu errado :(</h1>
   if (loading) return <h1>Carregando...</h1>
+  
+  function updateWeeklyRecipes(number){
+    setWeeklyRecipes(number);
+  }
+
+  function updateNumberOfPeople(number){
+    setNumberOfPeople(number);
+  }
 
   return (
-    <div className="App">
+    <div className="App">      
 
       <div className="title">
         <h1>Configure o plano que</h1>
@@ -40,44 +52,40 @@ function App() {
             <div className="people">
               <div className="people-title">Receita para quantas pessoas?</div>
               <div className="people-number">
-                <div>2</div>
-                <div>4</div>
+                {
+                  arrayPeople.map(people => (
+                    <button onClick={() => updateNumberOfPeople(people)}>{people}</button>
+                  ))
+                }
               </div>
             </div>
           </div>
           <div className="recipes">
             <div className="recipes-title">Quantas receitas por semana?</div>
             <div className="recipes-number">
-              <div>1</div>
-              <div>2</div>
-              <div>3</div>
+                {
+                  arrayRecipe.map(recipe => (
+                    <button onClick={() => updateWeeklyRecipes(recipe)}>{recipe}</button>
+                  ))
+                }
             </div>
           </div>
         </div>
         <div className="content-submit">
           <div className="price">
             <p>Preço do kit por semana</p>
-            <h1>R$69,00</h1>
+            <span>
+            {
+                data.listPlans.map(plan => (
+                  plan.weeklyRecipes === weeklyRecipes && plan.numberOfPeople === numberOfPeople &&
+                    <h1 key={plan.id}>price: {plan.price}</h1>
+                ))
+            }
+                </span>
           </div>
           <button>Quero assinar agora!</button>
         </div>
-      </div>
-
-      {/* <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <div>
-          {data.listPlans.map(plan => (
-            <div key={plan.id}>
-              <h1>{plan.price}</h1>
-              <h2>{plan.numberOfPeople}</h2>
-              <h3>{plan.weeklyRecipes}</h3>
-              <h4>{plan.id}</h4>
-            </div>
-          ))}
-        </div>
-      </header> */}
+      </div>     
     </div >
   );
 }
