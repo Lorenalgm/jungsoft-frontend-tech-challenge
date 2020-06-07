@@ -28,6 +28,7 @@ body {
   background-color: #ffff;
   margin: 2%;
   border-radius: 2.5%;
+  align-items: center;
 }
 
 .container img {
@@ -41,8 +42,7 @@ body {
   flex-direction: column;
   width: 100%;
   margin-top: 1.5em;
-  /* align-items: center; */
-  /* justify-content: center; */
+  align-items: center;
 }
 
 .content-title{
@@ -64,6 +64,8 @@ div .plans {
   border-radius: 4%;
   height: 15em;
   width: 45em;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .plans .people {
@@ -118,7 +120,7 @@ div .plans {
 div .content-submit {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -139,6 +141,7 @@ div .content-submit {
 }
 .price {
   line-height: 1em;
+  margin-right: 4em;
 }
 
 .price p {
@@ -189,13 +192,8 @@ div .content-submit {
 
   .container .content .plans{
     flex-direction: column;
-    margin-top: 4em;
-    margin-bottom: 3em;
     max-width: 100%;
-  }
-
-  .people{
-    margin-bottom: 2em;
+    height: 23em;
   }
 
   .people .people-title {
@@ -221,6 +219,7 @@ div .content-submit {
 
   .price {
     font-size: 20px;
+    margin-right: 0;
   }
 
   .content-submit .mobile {
