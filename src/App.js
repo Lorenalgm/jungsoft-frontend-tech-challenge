@@ -4,7 +4,6 @@ import { gql } from 'apollo-boost';
 import './App.css';
 import logo from './assets/backgrounds/bg1.jpg';
 import user from './assets/icons/user.svg';
-import clock from './assets/icons/clock.svg';
 import tools from './assets/icons/kitchen-tools.svg';
 
 const GET_PLANS = gql`
@@ -20,11 +19,11 @@ const GET_PLANS = gql`
 `
 
 function App() {
-  const { loading, error, data } = useQuery(GET_PLANS);
-  const [numberOfPeople, setNumberOfPeople] = useState(3);
-  const [weeklyRecipes, setWeeklyRecipes] = useState(3);
   const arrayPeople = [3, 4];
   const arrayRecipe = [3, 4, 5];
+  const { loading, error, data } = useQuery(GET_PLANS);
+  const [numberOfPeople, setNumberOfPeople] = useState(arrayPeople[0]);
+  const [weeklyRecipes, setWeeklyRecipes] = useState(arrayRecipe[0]);
 
   if (error) return <h1>Opa, algo deu errado :(</h1>
   if (loading) return <h1>Carregando...</h1>
@@ -97,7 +96,8 @@ function App() {
                 }
               </span>
             </div>
-            <button>Quero assinar agora!</button>
+            <button className="web">Quero assinar agora!</button>
+            <button className="mobile">Assinar agora!</button>
           </div>
         </div>
       </div>

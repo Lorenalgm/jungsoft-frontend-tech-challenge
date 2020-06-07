@@ -33,6 +33,7 @@ body {
 .container img {
   height: 29em;
   width: 31em;
+  max-width: 100%;
 }
 
 .container .content {
@@ -40,6 +41,8 @@ body {
   flex-direction: column;
   width: 100%;
   margin-top: 1.5em;
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .content-title{
@@ -57,10 +60,10 @@ div .plans {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin: 2em;
   background-color: #F5F8FA;
   border-radius: 4%;
-  height: 11em;
+  height: 15em;
+  width: 45em;
 }
 
 .plans .people {
@@ -97,6 +100,7 @@ div .plans {
   border-radius: 10%;
   border-width: 0;
   font-size: 29px;
+  cursor: pointer;
   font-weight: bold;
   background-color: #FFFF;
   color: #AEB2B8;
@@ -126,7 +130,12 @@ div .content-submit {
   border-radius: 20px;
   border-width: 0;
   font-size: 1em;
+  cursor: pointer;
   font-weight: bold;
+}
+
+.content-submit .mobile {
+  display: none;
 }
 .price {
   line-height: 1em;
@@ -144,4 +153,85 @@ div .content-submit {
 }
 .price h1 span {
   font-size: 0.6em;
+}
+
+@media all and (max-width: 800px) {
+  body {
+    justify-content: center;
+    max-width: 100%;
+  }
+
+  .title {
+    margin:1.3em;
+    margin-top: 3em;
+    font-size: 1em;
+    margin-bottom: 2em;
+  }
+  div .container{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container img {
+    max-width: 100%;
+    height: 20em;
+  }
+
+  div .content {
+    flex-direction: column;
+  }
+  
+  .container .content .content-title {
+    font-size: 1em;
+    margin-top: 1.4em;
+  }
+
+  .container .content .plans{
+    flex-direction: column;
+    margin-top: 4em;
+    margin-bottom: 3em;
+    max-width: 100%;
+  }
+
+  .people{
+    margin-bottom: 2em;
+  }
+
+  .people .people-title {
+    max-height: 5em;
+  }
+
+  .recipes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipes .recipes-title {
+    max-height: 5em;
+  }
+  
+  .container .content-submit{
+    flex-direction: column;
+    margin-top: 2em;
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .content-submit .mobile {
+    display: block;
+  }
+
+  .content-submit button {
+    width: 20em;
+  }
+
+  .content-submit .web {
+    display: none;
+  }
 }
