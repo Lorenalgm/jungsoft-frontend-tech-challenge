@@ -42,9 +42,9 @@ The goal of this challenge is to create part of one page using an API and layout
 - Apollo
 
 ## Notes
-1 - No modelo de desafio disponível, o número de pessoas era 2 e 4 e a quantidade de receitas era 1, 2 e 3. No entanto, ao observar a API, notei que não havia muitos planos disponíveis com essa numeração, então escolhi para alterar esses números para:<br>
-Número de pessoas 3 e 4<br>
-Número de receitas 3, 4 e 5<br>
+1 - In the available challenge template, the number of people was 2 and 4, and the amount of recipes was 1, 2 and 3. However, when observing the API I noticed that there were not so many plans available with this numbering, so I chose to change these numbers for:<br>
+Number of people 3 and 4<br>
+Number of recipes 3, 4 and 5<br>
 <br>
 2 - The plans are dynamic, so I created an array containing the amount of people available and another array containing the amount of recipes. At that moment I put this information in a static way, but the correct thing would be to collect this data directly from the API, as the administrators create and delete the plans.<br>
 <br>
