@@ -1,68 +1,72 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<p align="center">
+    <img src="https://i.imgur.com/Hu6m5dt.png" alt="Logo" width="100" height="100">
+  <h3 align="center">Jungsoft Challenge</h3>
 
-## Available Scripts
+  <p align="center">    
+    A website where you can order food kits to cook for yourself!
+       <br />
+    <br />
+     <a href="https://xd.adobe.com/view/7dc52aae-3138-47ed-4e1b-b7fffa1874fd-0bf4/">Layout 1</a> 
+      .
+  <a href="https://xd.adobe.com/view/ee93c1e8-bf33-48ac-7c51-2e974ca577bb-98a2/">Layout 2</a> 
+  </p> 
 
-In the project directory, you can run:
+## Table of contents
 
-### `yarn start`
+* [About](#about)
+  * [Web](#web)
+  * [Mobile](#mobile)
+* [Technologies](#technologies)
+* [Notes](#notes)
+* [How To Use](#how-to-use)
+* [Contacts](#contacts)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About
+The goal of this challenge is to create part of one page using an API and layout developed by Jungsoft's team. 
+<br>The project is a website where you can order food kits to cook for yourself, so in the frontend is necessary to select the amount of people to feed and the amount of recipes to receive per week, the prices will be calculate based on this.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### Web
+<p align="center">
+<img src="https://i.imgur.com/hBABnLL.png" width="580" height="380">
+</p>
 
-### `yarn test`
+### Mobile
+<p align="center">
+<img src="https://imgur.com/j57SI9k.png" width="480" height="580">
+</p>
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Technologies:
+- Reactjs
+- GraphQL
+- Apollo
 
-### `yarn build`
+## Notes
+1 - No modelo de desafio disponível, o número de pessoas era 2 e 4 e a quantidade de receitas era 1, 2 e 3. No entanto, ao observar a API, notei que não havia muitos planos disponíveis com essa numeração, então escolhi para alterar esses números para:<br>
+Número de pessoas 3 e 4<br>
+Número de receitas 3, 4 e 5<br>
+<br>
+2 - The plans are dynamic, so I created an array containing the amount of people available and another array containing the amount of recipes. At that moment I put this information in a static way, but the correct thing would be to collect this data directly from the API, as the administrators create and delete the plans.<br>
+<br>
+### How To Use
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone this repository:
+```sh 
+git@github.com:Lorenalgm/jungsoft-frontend-tech-challenge.git
+```
+2. Open the project in your editor
+3. In your terminal, install the necessary packages:
+```sh 
+yarn 
+``` 
+4. Now you can start the server
+```sh 
+yarn start
+```
+5. Ready! The challenge is available at http://localhost:3000/
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contacts
+E-mail: lgoesmontes@gmail.com<br>
+Linkedin: https://www.linkedin.com/in/lorenagmontes/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+   
