@@ -92,7 +92,7 @@ function App() {
                 {
                   data.listPlans.map(plan => (
                     plan.weeklyRecipes === weeklyRecipes && plan.numberOfPeople === numberOfPeople &&
-                    <h1 key={plan.id}><span>R$</span> {plan.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</h1>
+                    <h1 key={plan.id}><span>R$</span> {plan.price}</h1>
                   ))
                 }
               </span>
